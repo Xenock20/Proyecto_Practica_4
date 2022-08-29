@@ -1,0 +1,112 @@
+:root{
+  --surface: #232154;
+  --background: #a53cfb;
+  --color: #ffffff;
+  --focus-background: #ffffff;
+  --focus-color: #934388;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: var(--surface);
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+form{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"]{
+  margin: 10px;
+  height: 2vh;
+  padding: 3vh;
+  font-size: 20px;
+  outline: none;
+}
+
+.grid{
+  display: grid;
+  grid-template-areas: 
+    "multiplicar dividir"
+    "suma resta";
+  grid-gap: 10px;
+}
+
+input[name="suma"]{
+  grid-area: suma;
+}
+
+input[name="resta"]{
+  grid-area: resta;
+}
+
+input[name="multiplicar"]{
+  grid-area: multiplicar;
+}
+
+input[name="dividir"]{
+  grid-area: dividir;
+}
+
+input[type="submit"]{
+  margin-top: 10px;
+  width: 150px;
+  padding: 2vh;
+  background-color: var(--background);
+  color: var(--color);
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.1s;
+}
+
+input[type="submit"]:active{
+  background-color: var(--focus-background);
+  color: var(--focus-color);
+}
+
+h1{
+  margin-top: 10px;
+}
+
+ul{
+  color: var(--color);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.antRes{
+  border: var(--focus-color) solid 2px;
+  padding: 20px;
+  text-align: center;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.antRes::-webkit-scrollbar{
+  width: 12px;
+}
+
+.antRes::-webkit-scrollbar-thumb {
+  background-color: var(--background);
+}
+
+#list{
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
